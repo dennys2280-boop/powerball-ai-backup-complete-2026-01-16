@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- App UI Tokens ---------- */
+@layer base {
+  :root {
+    --app-radius: 1rem; /* ~rounded-2xl */
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+}
+
+/* ---------- Reusable Utilities (no lógica) ---------- */
+@layer components {
+  .app-container {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .app-page {
+    @apply py-6;
+  }
+
+  .app-title {
+    @apply text-2xl font-semibold text-slate-900;
+  }
+
+  .app-subtitle {
+    @apply mt-1 text-slate-600;
+  }
+
+  .app-card {
+    @apply rounded-2xl bg-white p-6 shadow-sm border border-slate-200;
+  }
+
+  .app-btn {
+    @apply rounded-xl px-3 py-2 text-sm font-medium transition;
+  }
+
+  .app-btn-ghost {
+    @apply app-btn text-slate-700 hover:bg-slate-100;
+  }
+
+  .app-btn-primary {
+    @apply app-btn bg-slate-900 text-white hover:bg-slate-800;
+  }
+
+  .app-navlink {
+    @apply rounded-xl px-3 py-2 text-sm font-medium transition;
+  }
+
+  .app-navlink-active {
+    @apply bg-slate-900 text-white;
+  }
+
+  .app-navlink-inactive {
+    @apply text-slate-700 hover:bg-slate-100;
+  }
+}
+
+/* =========================
+   Neon tokens (CTA + Compare)
+   ========================= */
+
+:root {
+  --neon-red: #ef4444; /* red-500 */
+  --neon-yellow: #facc15; /* yellow-400 */
+  --neon-blue: #60a5fa; /* blue-400 (only for Compare B for now) */
+}
+
+/* CTA neon (Search / primary actions) */
+.neon-cta {
+  border: 1px solid rgba(239, 68, 68, 0.55);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), #ffffff 70%);
+  box-shadow:
+    0 0 0 2px rgba(239, 68, 68, 0.22),
+    0 0 18px rgba(239, 68, 68, 0.35);
+}
+
+.neon-cta:hover {
+  box-shadow:
+    0 0 0 2px rgba(239, 68, 68, 0.3),
+    0 0 26px rgba(239, 68, 68, 0.45);
+}
+
+.neon-cta:disabled {
+  box-shadow: none;
+  opacity: 0.55;
+}
+
+/* Compare rings */
+.neon-ring-a {
+  box-shadow:
+    0 0 0 2px rgba(250, 204, 21, 0.75),
+    0 0 14px rgba(250, 204, 21, 0.55);
+}
+
+.neon-ring-b {
+  box-shadow:
+    0 0 0 2px rgba(96, 165, 250, 0.75),
+    0 0 14px rgba(96, 165, 250, 0.55);
+}
+
+/* Optional: underline for active nav (Header) */
+.neon-nav-active {
+  border-bottom: 2px solid var(--neon-red);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.25);
+}

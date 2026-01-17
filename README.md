@@ -20,6 +20,28 @@ powerball_ai_backup_2026-01-16/
 |-- section8_docs/           # Documentation
 |-- section9_presentations/  # Investor Presentations
 |-- archives/                # Original ZIP backups
+|-- powerball_app_working/   # Proyecto funcional listo para ejecutar
+|-- powerball_robot_v45/     # Robot Coach v45 standalone
+```
+
+## Proyecto Funcional (powerball_app_working/)
+
+Proyecto completo listo para ejecutar con:
+- **Frontend:** React + Vite + TailwindCSS (puerto 5179)
+- **Backend:** FastAPI + SQLAlchemy (puerto 8000)
+- **Robot Coach:** Interfaz completa en /robot
+- **Base de datos:** SQLite con datos historicos
+
+### Como ejecutar:
+```bash
+# Backend
+cd powerball_app_working/backend
+source venv/Scripts/activate
+uvicorn app.main:app --reload --port 8000
+
+# Frontend
+cd powerball_app_working/frontend
+npm run dev
 ```
 
 ---

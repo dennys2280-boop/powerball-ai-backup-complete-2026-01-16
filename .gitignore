@@ -5,11 +5,13 @@ __pycache__/
 .venv/
 venv/
 *.egg-info/
+*.pyc
 
 # Node
 node_modules/
 .npm
 .pnpm-store
+package-lock.json
 
 # IDE
 .vscode/
@@ -20,3 +22,8 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+
+# Build
+dist/
+build/
+.cache/
